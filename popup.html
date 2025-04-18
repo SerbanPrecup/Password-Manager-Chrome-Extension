@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="setMasterContainer" class="form-container">
+            <h2>Set Master Password</h2>
+
+            <label for="masterPassword"><strong>Master Password</strong></label>
+            <div class="password-input-container">
+                <input type="password" id="masterPassword" placeholder="Master Password" />
+                <button type="button" class="toggle-password-input">
+                    <img src="images/show-icon.png" alt="Show/Hide">
+                </button>
+            </div>
+
+            <label for="confirmMasterPassword"><strong>Confirm Master Password</strong></label>
+            <div class="password-input-container">
+                <input type="password" id="confirmMasterPassword" placeholder="Confirm Master Password" />
+                <button type="button" class="toggle-password-input">
+                    <img src="images/show-icon.png" alt="Show/Hide">
+                </button>
+            </div>
+
+            <div class="form-actions">
+                <button id="saveMasterBtn" class="btn success">Save</button>
+                <button id="cancelMasterBtn" class="btn danger">Cancel</button>
+            </div>
+        </div>
+
+        <div id="mainContainer" class="hidden">
+            <h2>Password Generator</h2>
+            <div class="generator-container">
+                <button id="generateBtn" class="btn primary">
+                    <img src="images/shuffle-icon.png" alt="Generate" class="btn-icon">
+                </button>
+                <div class="password-input-container">
+                    <input type="text" id="generatedPassword" readonly placeholder="Generated password">
+                    <button id="copyBtn" class="toggle-password-input">
+                        <img src="images/copy-icon.png" alt="Copy">
+                    </button>
+                </div>
+            </div>
+
+            <h2>Manage</h2>
+            <div class="manage-container">
+                <button id="addAccountBtn" class="btn primary">
+                    <img src="images/add-icon.png" alt="Add" class="btn-icon"> Add Account
+                </button>
+                <button id="disconnectBtn" class="btn warning">
+                    <img src="images/leave-icon.png" alt="Disconnect" class="btn-icon"> Disconnect
+                </button>
+                <button id="deleteAllBtn" class="btn danger">
+                    <img src="images/delete-icon.png" alt="Delete All Data" class="btn-icon"> Delete All Data
+                </button>
+                <button id="editMasterBtn" class="btn secondary">
+                    <img src="images/key-icon.png" alt="Edit Master" class="btn-icon"> Edit Master Password
+                </button>
+                <div id="addForm" class="hidden form-container">
+                    <h2 id="formTitle">Add/Edit Password</h2>
+                    <input type="text" id="site" placeholder="Website">
+                    <input type="text" id="username" placeholder="Username">
+                    <div class="password-input-container">
+                        <input type="password" id="password" placeholder="Password">
+                        <button type="button" id="togglePasswordField" class="toggle-password-input">
+                            <img src="images/show-icon.png" alt="Show Password">
+                        </button>
+                    </div>
+                    <div class="form-actions">
+                        <button id="savePassword" class="btn success">Save</button>
+                        <button id="cancelEdit" class="btn danger">Cancel</button>
+                        <button id="deletePassword" class="btn warning hidden">Delete</button>
+                    </div>
+                </div>
+                <div id="editMasterForm" class="hidden form-container">
+                    <h2>Change Master Password</h2>
+
+                    <label for="currentMaster"><strong>Current Master Password</strong></label>
+                    <div class="password-input-container">
+                        <input type="password" id="currentMaster" placeholder="" />
+                        <button type="button" class="toggle-password-input">
+                            <img src="images/show-icon.png" alt="Show/Hide">
+                        </button>
+                    </div>
+
+                    <label for="newMaster"><strong>New Master Password</strong></label>
+                    <div class="password-input-container">
+                        <input type="password" id="newMaster" placeholder="" />
+                        <button type="button" class="toggle-password-input">
+                            <img src="images/show-icon.png" alt="Show/Hide">
+                        </button>
+                    </div>
+
+                    <label for="confirmNewMaster"><strong>Confirm New Master Password</strong></label>
+                    <div class="password-input-container">
+                        <input type="password" id="confirmNewMaster" placeholder="" />
+                        <button type="button" class="toggle-password-input">
+                            <img src="images/show-icon.png" alt="Show/Hide">
+                        </button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button id="saveNewMasterBtn" class="btn success">Save</button>
+                        <button id="cancelNewMasterBtn" class="btn danger">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Accounts</h2>
+            <div class="account-container">
+                <input type="text" id="searchAccount" placeholder="Search account">
+                <div class="filter-buttons">
+                    <button class="btn secondary">ALL</button>
+                    <button class="btn secondary">Favorites</button>
+                </div>
+            </div>
+            <div id="accountsList"></div>
+
+
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 350px;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.primary {
+    background: #007bff;
+    color: white;
+}
+
+.secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.success {
+    background: #28a745;
+    color: white;
+}
+
+.danger {
+    background: #dc3545;
+    color: white;
+}
+
+.warning {
+    background: #ffc107;
+    color: black;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.generator-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.generator-container input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.manage-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.manage-container .btn {
+    flex: 1 1 auto;
+}
+
+.account-container {
+    margin-bottom: 15px;
+}
+
+.account-container input#searchAccount {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.password-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.password-item:hover {
+    transform: scale(1.02);
+}
+
+.password-item strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+.password-item span {
+    color: #555;
+}
+
+.password-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.password-actions button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.password-actions button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.password-input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.password-input-container input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.toggle-password-input {
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password-input img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+#passwordPrompt {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    width: 100%;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#passwordPrompt.show {
+    display: block;
+    opacity: 1;
+}
+
+.password-prompt-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.password-prompt-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#generatedPassword {
+    width: 100%;
+    padding-right: 2.5em;
+    box-sizing: border-box;
+}
+
+
+#setMasterContainer.form-container h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+#setMasterContainer.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+#setMasterContainer.form-container .form-actions {
+    margin-top: 15px;
+}
