@@ -323,7 +323,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <button class="show-password" data-i="${i}"><img src="images/show-icon.png" alt="Show/Hide"></button>
                         <button class="copy-password" data-i="${i}"><img src="images/copy-icon.png" alt="Copy"></button>
                         <button class="edit" data-i="${i}"><img src="images/edit-icon.png" alt="Edit"></button>
-                        <button class="autofill" data-i="${i}"><img src="images/autocomplete-icon.png" alt="Autofill"></button>
                         <button class="delete" data-i="${i}"><img src="images/delete-icon.png" alt="Delete"></button>
                         <button class="favorite" data-i="${i}"><img src="${favSrc}" alt="Favorite"></button>
                     </div>`;
@@ -362,18 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         try { actual = await decryptText(acct.password, acct.iv); } catch { }
                         navigator.clipboard.writeText(actual);
                         alert('Password copied!');
-                    });
-                });
-            });
-            document.querySelectorAll('.autofill').forEach(btn => {
-                btn.addEventListener('click', e => {
-                    const idx = +e.currentTarget.dataset.i;
-                    chrome.storage.local.get('accounts', async data => {
-                        const acct = data.accounts[idx];
-                        let actual = '';
-                        try { actual = await decryptText(acct.password, acct.iv); } catch { }
-                        navigator.clipboard.writeText(actual);
-                        alert('Password copied for autofill!');
                     });
                 });
             });
