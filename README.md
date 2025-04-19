@@ -22,7 +22,6 @@ Developed using HTML, CSS, and JavaScript, passManager operates locally with no 
 1. Clone this repository:
    ```bash
    git clone https://github.com/SerbanPrecup/passManager.git
-   cd ssi/server
    ```
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable **Developer Mode** (top-right)
